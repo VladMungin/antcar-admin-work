@@ -1,8 +1,9 @@
-import { Datagrid, ImageField, List, TextField, WrapperField } from 'react-admin'
-const AutosList = () => {
+import { ImageField, Show, SimpleShowLayout, TextField, WrapperField } from 'react-admin'
+const AutosShow = () => {
 	return (
-		<List>
-			<Datagrid rowClick='show'>
+		<Show>
+			<SimpleShowLayout>
+
 				<TextField source='name'/>
 				<ImageField source='images[0].pathS3'/>
 				<TextField source='year'/>
@@ -15,9 +16,9 @@ const AutosList = () => {
 				<TextField source='fuelType'/>
 				<TextField source='enginePower'/>
 				<TextField source='driveType'/>
-			</Datagrid>
-		</List>
+			</SimpleShowLayout>
+		</Show>
 	)
 }
 
-export default AutosList
+export default AutosShow
